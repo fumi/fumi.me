@@ -20,14 +20,14 @@ tags:
 
 
 
-    
+
     <code>
     --- wp-mixipublisher.php.backup 2008-07-29 15:05:00.000000000 +0900
     +++ wp-mixipublisher.php        2008-07-29 16:15:33.081006700 +0900
     @@ -112,7 +112,7 @@
          function publishToMixi($postId) {
              global $wpdb, $user_ID;
-    
+
     -        if(!user_can_edit_post($user_ID, $postId)) {
     +        if(!current_user_can('edit_post', $postId)) {
                  return $postId;
@@ -39,4 +39,4 @@ tags:
 
 
 修正後のwp-mixipublisher.phpをzipにして置いておきます。これは二つの変更(1, 2)もすでに適用されています。
-[wp-mixipublisher.zip](http://fumi.me/wp-content/uploads/2008/07/wp-mixipublisher.zip)
+[wp-mixipublisher.zip](/images/2008-07-29-wp-mixipublisher-patch/wp-mixipublisher.zip)
