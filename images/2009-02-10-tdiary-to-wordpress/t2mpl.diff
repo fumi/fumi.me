@@ -1,0 +1,94 @@
+--- t2m.pl.orig	2009-02-09 17:51:04.000000000 +0900
++++ t2m.pl	2009-02-10 10:10:43.000000000 +0900
+@@ -1,5 +1,8 @@
+ #!/usr/bin/perl
+-
++#
++# original script at http://kenstar.org/~kenstar/computer/program/t2m.html
++# modified by Fumihiro Kato <fumi@fumi.me> at 2009-02-09
++#
+ # 前提知識
+ #  tdiaryのログはdata_pathの下にファイルがあります。
+ #  ファイル
+@@ -19,7 +22,7 @@
+ 
+ binmode(STDOUT, ":utf8");
+ 
+-$author="ks";
++$author="fumi";
+ 
+ #画像の移行を行うばあいは設定必須
+ ${tdiary_imags_dir}="/home/kenstar/public_html/tdiary/images";
+@@ -39,7 +42,7 @@
+     print << "__DIARY_FST__";
+ AUTHOR: $author
+ TITLE: $title
+-STATUS: Publish
++STATUS: Draft
+ ALLOW COMMENTS: 1
+ CONVERT BREAKS: __default__
+ ALLOW PINGS: 1
+@@ -129,9 +132,11 @@
+ 
+     open TDIARY, "<:encoding(euc-jp)", $file;
+     $title_switch=0;
++    $ul_switch=0;
+ 
+     while (<TDIARY>){
+ 	chomp;
++
+ 	if(/^.$/){
+ 	    # 日付終了記号
+ 	    $title_switch=0;
+@@ -179,6 +184,11 @@
+ 
+ 	    my($tmp);
+ 	    $tmp = $_;
++
++	    # replace a hyperlink
++	    if ($tmp =~ /\[\[(.*)\s*\|(.*)\]\]/){
++		$tmp = $1;
++	    }
+ 	    if ($tmp =~ /\[([^\]]*)\](.*)/){
+ 		$category{$diary_key} = $1;
+ 	        $title{$diary_key} = $2;
+@@ -188,8 +198,11 @@
+ 	        $title{$diary_key} = $tmp;
+ 		$visible{$diary_key} = $visible;
+ 	    }
++	    if($title{$diary_key} =~ /^!(.*)/){
++	    	$title{$diary_key} = $1;
++	    }
+ 	    $title_switch=0;
+-	    $p_date_time = sprintf "%s 00:00:%02d PM", ${p_date}, ${key};
++	    $p_date_time = sprintf "%s 12:00:%02d PM", ${p_date}, ${key};
+ 	    $date{$diary_key}=$p_date_time;
+ 	}else{
+ 	    # 日記本体
+@@ -221,7 +234,25 @@
+ 	        s/\<\%=image\s+[\d]+,\s*'.*'\s*(,\s*.*\s*,\s*.*\s*)?\%\>/\<img alt=\"${alt}\" src=\"${image_url}\/${image_name}\" width=${width} height=${height} border="0"\/>/;
+ 	        copy ("${tdiary_imags_dir}/${image_name}", "${MT_image_dir}") or print "cannot copy\n";
+ 	    }
+-	    $body{$diary_key} .= $_ . "\n";
++
++	    # replace a hyperlink
++	    if ($tmp = /\[\[(.*)\s*\|(.*)\]\]/){
++		$tmp = "<a href=\"" . $2 . "\">" . $1 . "</a>";
++	    }
++
++	    if ($ul_switch && /^[^\*]/) {
++	    	$ul_switch = 0;
++		$body{$diary_key} .= "</ul>\n<p>";
++	    }
++	    if (/^\*\s+(.*)/){
++		if (! $ul_switch) {
++		    $ul_switch = 1;
++		    $body{$diary_key} .= "</p>\n<ul>\n";
++		}
++		$body{$diary_key} .= "<li>" . $1 . "</li>\n";
++	    } else {
++	    	$body{$diary_key} .= $_ . "\n";
++	    }
+ 	}
+     }
+     close TDIARY;
