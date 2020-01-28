@@ -14,10 +14,7 @@ tags:
 - Open Data
 ---
 
-[![オープンデータ活用コンテスト___未来とメトロ___東京メトロ　10th　anniversary](http://fumi.me/wp-content/uploads/2014/08/b0fbe74fec1594da742effab60d0c619-300x277.png)](http://fumi.me/wp-content/uploads/2014/08/b0fbe74fec1594da742effab60d0c619.png)
-
-
-
+{% include image.html url="/images/2014-08-20-tokyo-metro/b0fbe74fec1594da742effab60d0c619-300x277.png" description="オープンデータ活用コンテスト___未来とメトロ___東京メトロ　10th　anniversary" %}
 
 以下はFacebook上での議論をまとめたものです．
 
@@ -51,4 +48,3 @@ tags:
 
 
 繰り返しますが，試み自体は大変素晴らしいことですので，東京メトロさんには是非オープンデータという単語を誤用せずに正しく理解した上でコンテストを行なって頂ければと切に願います．
-
