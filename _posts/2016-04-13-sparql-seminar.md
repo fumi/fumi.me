@@ -8,7 +8,7 @@ slug: sparql-seminar
 title: 第1回LODセミナー 「実践 SPARQL!」
 wordpress_id: 3332
 categories:
-- 未分類
+- SPARQL
 ---
 
 [SPARQL本](http://sparqlbook.jp)をベースにしたセミナーを開催したいとは思っていたのですが、この度日本オラクル株式会社のご協力で開催することになりました。詳細や申込方法はSlideshareの内容をご確認ください。
