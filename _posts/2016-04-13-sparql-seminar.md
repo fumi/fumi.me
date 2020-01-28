@@ -13,8 +13,4 @@ categories:
 
 [SPARQL本](http://sparqlbook.jp)をベースにしたセミナーを開催したいとは思っていたのですが、この度日本オラクル株式会社のご協力で開催することになりました。詳細や申込方法はSlideshareの内容をご確認ください。
 
-
-
-
-
-** [第1回 LODセミナー「実践 SPARQL！」](//www.slideshare.net/oracle4engineer/lod-seminar-01) ** from **[oracle4engineer](//www.slideshare.net/oracle4engineer)**
+* [第1回 LODセミナー「実践 SPARQL！」](//www.slideshare.net/oracle4engineer/lod-seminar-01) from [oracle4engineer](//www.slideshare.net/oracle4engineer)**
