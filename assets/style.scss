@@ -214,6 +214,17 @@ strong, b {
   font-weight: bold;
 }
 
+figure {
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
+  border: inset #888 4px;
+}
+
+figcaption {
+  margin-top: 3px;
+}
+
 img {
   max-width: 100%;
 }
@@ -611,7 +622,7 @@ Modules - reusable parts of our design
 
 #gh-latest{
     font-size: 16px;
-    text-align: center;		
+    text-align: center;
 }
 
 .text-link {
@@ -714,7 +725,7 @@ Modules - reusable parts of our design
   display: inline-block;
 }
 
-.pagination a {    
+.pagination a {
   &:hover {
       background-color: #f1f1f1;
       color: #333;
