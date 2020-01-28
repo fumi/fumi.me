@@ -12,7 +12,7 @@ author: fumi
 description: Webとカメラと写真と
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /assets/images/fumi.jpg
+avatar: /images/fumi.jpg
 
 #
 # Flags below are optional
@@ -100,7 +100,7 @@ paginate_path: /page:num/
 
 defaults:
   scope:
-    path: "assets/images"
+    path: "images"
   values:
     image: true
 
