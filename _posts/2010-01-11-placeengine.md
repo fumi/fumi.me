@@ -61,6 +61,6 @@ ActionScriptからローカルDBを使うには以下のようにします．
 getLocation がうまく動かないためWebAPIから直接取得できないのですが，原因はcrossdomain.xmlにあるようです．どうやらcrossdomain.xmlの内容が古いらしく，以下のエラーを吐きます．サーバ側で対応してもらえるように，後で連絡する予定です．
 
 
-        > Warning: Domain www.placeengine.com does not specify a meta-policy.  Applying default meta-policy 'master-only'.  This configuration is deprecated.  See http://www.adobe.com/go/strict_policy_files to fix this problem.
-        >
-        > Error: Ignoring policy file at http://www.placeengine.com/api/crossdomain.xml due to meta-policy 'master-only'.
+> Warning: Domain www.placeengine.com does not specify a meta-policy.  Applying default meta-policy 'master-only'.  This configuration is deprecated.  See http://www.adobe.com/go/strict_policy_files to fix this problem.
+>
+> Error: Ignoring policy file at http://www.placeengine.com/api/crossdomain.xml due to meta-policy 'master-only'.
