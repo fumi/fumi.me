@@ -18,7 +18,3 @@ tags:
 ---
 
 私も翻訳に参加したLinked Dataの本が2/4に発売されます．日本語でLinked Dataについて包括的に解説するはじめての本ですので，Linked Dataやオープンデータ，Web技術に興味がある方皆様に役立つとおもいます．是非お手にとって頂ければ幸いです．([目次案](http://linkedopendata.jp/?p=241))
-
-
-
-[tmkm-amazon]4764904276[/tmkm-amazon]
