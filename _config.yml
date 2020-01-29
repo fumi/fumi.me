@@ -21,16 +21,16 @@ avatar: /images/fumi.jpg
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: 
+  email:
   facebook:
   flickr:
   github: fumi
   instagram: fumi1
-  linkedin: 
+  linkedin:
   pinterest:
   rss: rss
   twitter: fumi1
-  stackoverflow: 
+  stackoverflow:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
   playconsole:
@@ -38,7 +38,7 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: 
+disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: UA-5841060-2
@@ -87,7 +87,7 @@ plugins:
 
 include: ['_pages']
 
-paginate: 6
+paginate: 5
 paginate_path: /page:num/
 
 # Exclude these files from your production _site
@@ -103,4 +103,3 @@ defaults:
     path: "images"
   values:
     image: true
-
