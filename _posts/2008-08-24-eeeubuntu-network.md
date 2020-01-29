@@ -20,13 +20,10 @@ eeeUbuntu 8/24の最新版だと、前の版で苦労したWEP+ステルスモ�
 インターネットに繋げるようになったら、システムをアップデートします。
 
 
-
-    
-    <code>
-    $ aptitude update
-    $ aptitude safe-upgrade
-    </code>
-
+```bash
+$ aptitude update
+$ aptitude safe-upgrade
+```
 
 
 
